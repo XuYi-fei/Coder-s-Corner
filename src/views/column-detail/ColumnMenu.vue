@@ -10,11 +10,11 @@
     <a :href="`/column/` + vo.column + '/' + `${id+1}`" v-for="(menu, id) in vo.articleList" :key="id" class="mb-4">
       <el-menu-item  :index="`/column/` + vo.column + '/' + `${id+1}`">
         <template #default>
-          <div style="font-size: 16px; width: 180px" >
+          <div :title="menu.title" style="font-size: 16px; width: 180px" >
             <span class="mr-2 font-bold">{{id + 1}}</span>
-            <span>{{menu.title}}</span>
+            <span > {{menu.title.length > 10? menu.title.substring(0, 10) + '....': menu.title}}</span>
           </div>
-          <div class="right ml-10 center-content">
+          <div class="right center-content">
             <div class="label label-free" v-if="menu.readType === 0">免费</div>
             <div class="label label-free" v-else-if="menu.readType === 1 || !global.isLogin">登录</div>
             <div class="label" v-else-if="menu.readType === 2">限免</div>

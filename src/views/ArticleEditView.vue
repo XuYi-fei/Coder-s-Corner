@@ -18,7 +18,7 @@
         </template>
       </el-form-item>
     </el-form>
-    <el-button @click="submitDialogVisible = true" :disabled="titleForm.title.length < 6 || titleForm.title.length > 20" type="success" style="height: 40px; width: 100px"> 保存</el-button>
+    <el-button @click="submitDialogVisible = true" :disabled="titleForm.title.length < 6 || titleForm.title.length > 40" type="success" style="height: 40px; width: 100px"> 保存</el-button>
   </div>
 
   <!--  正文内容-->
@@ -77,7 +77,7 @@
                 v-model="articleInfoForm.tags"
                 clearable
                 multiple
-                multiple-limit="3"
+                multiple-limit="6"
                 placeholder="请选择文章的标签"
                 filterable
                 :loading="tagsLoading"
@@ -233,7 +233,7 @@ const titleForm = reactive<TitleForm>({
 const titleFormRules = reactive<FormRules<TitleForm>>({
   title: [
     { required: true, message: '请输入文章标题', trigger: 'blur' },
-    { min: 6, max: 20, message: '长度在 6 到 20 个字符', trigger: 'blur' },
+    { min: 6, max: 40, message: '长度在 6 到 40 个字符', trigger: 'blur' },
   ],
 })
 
