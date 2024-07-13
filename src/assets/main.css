@@ -54,6 +54,10 @@
     color: var(--active-element-color);
 }
 
+.hover-background:hover{
+    background: var(--active-background-color);
+}
+
 /*用于那种高亮的标签表示正在被选中，也可以用于其他需要醒目显示的地方*/
 .active-color{
     color: var(--active-element-color);

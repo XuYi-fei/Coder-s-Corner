@@ -9,16 +9,17 @@
             @load="setColor(iter)"
           />
           <div class="home-carouse-item-body">
-            <div class="home-carouse-item-title">{{article.title}}</div>
-            <div class="home-carouse-item-tag">
+            <div class="home-carouse-item-title" :title="article.title">{{article.title}}</div>
+            <div class="home-carouse-item-tag hover-background" :title="article.tags.map(tagItem => tagItem.tag).join(',')">
               <span class="home-carouse-item-dot tag"></span>
 
-              <div v-for="(tag, index) in article.tags" :key="index">
+              <div v-for="(tag, index) in article.tags.slice(0, 3)" :key="index">
                 <span class="home-carouse-item-first-text">{{tag.tag}}</span>
               </div>
+              <div  v-if="article.tags.length > 3">.....</div>
             </div>
             <!-- <object> -->
-            <div class="home-carouse-item-tag flex">
+            <div class="home-carouse-item-tag flex hover-background">
               <span class="home-carouse-item-dot"></span>
               <!-- <a th:href="${'/user/' + article.author}"> -->
               <span class="ml-2">{{article.authorName}}</span>
@@ -40,6 +41,7 @@ import { ref } from 'vue'
 import Vibrant from 'node-vibrant/lib/bundle'
 import type { ArticleType } from '@/http/ResponseTypes/ArticleType/ArticleType'
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const props = defineProps<{
   topArticles: ArticleType[]
 }>()
