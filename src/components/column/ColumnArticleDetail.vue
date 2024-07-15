@@ -48,6 +48,10 @@
             <span>删除</span>
           </p>
         </div>
+        <!--    文章的tag    -->
+        <div>
+          <el-tag class="m-1" v-for="tagItem in articleVo.article.tags" :type="getRandomElTagType()" :key="tagItem.tagId">{{tagItem.tag}}</el-tag>
+        </div>
       </div>
     </div>
 
@@ -241,6 +245,7 @@ import { ARTICLE_LIKE_COLLECT_URL } from '@/http/URL'
 import { OperateTypeEnum } from '@/constants/OperateTypeConstants'
 import type { SimpleUserInfo } from '@/http/ResponseTypes/UserInfoType/SimpleUserInfoType'
 import type { ColumnArticlesResponseType } from '@/http/ResponseTypes/ColumnDetailType/ColumnArticlesResponseType'
+import { getRandomElTagType } from '@/constants/element-plus-constants/ELTagEnumConstants'
 
 const globalStore = useGlobalStore()
 const global = globalStore.global
