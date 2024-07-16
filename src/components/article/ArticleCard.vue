@@ -75,7 +75,7 @@
           </div>
 
           <div
-            class="user-article-item-tag-wrap cdc-tag-links cdc-article-panel__tags"
+            class="user-article-item-tag-wrap cdc-tag-links cdc-article-panel__tags  hidden-when-screen-small"
           >
             <svg
               width="16"
@@ -83,7 +83,7 @@
               viewBox="0 0 16 16"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              class="cdc-tag-links__icon"
+              class="cdc-tag-links__icon m-0"
             >
               <mask
                 id="mask0_1118_14146"
@@ -113,11 +113,11 @@
               </g>
             </svg>
 
-            <div class="cdc-tag-links__items" v-for="tag in article.tags" :key="tag.tagId">
+            <div class="cdc-tag-links__item" v-for="tag in article.tags" :key="tag.tagId">
               <a
                 :href="'/article/tag/' + tag.tag"
                 rel="article-tag"
-                class="user-article-item-tag cdc-tag-links__item"
+                class="user-article-item-tag cdc-tag-links__item ml-2 mr-0"
               >{{tag.tag}}</a>
             </div>
           </div>

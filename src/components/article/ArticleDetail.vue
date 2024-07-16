@@ -3,7 +3,7 @@
   <div class="article-suspended-panel hidden-when-screen-small">
     <!-- 点赞 -->
     <div class="mb-4">
-      <el-badge :type="praised? 'danger': 'primary'" :value="praiseCnt" class="item" :hidden="praiseCnt === 0" >
+      <el-badge :offset="[-5, 5]" :type="praised? 'danger': 'primary'" :value="praiseCnt" class="item" :hidden="praiseCnt === 0" >
         <el-button circle round size="large" @click="likeArticle">
           <el-icon v-show="!btnLoading" size="20"><svg t="1719494245215" class="icon" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" p-id="2214" id="mx_n_1719494245217" width="16" height="18"><path d="M621.674667 408.021333c16.618667-74.24 28.224-127.936 34.837333-161.194666C673.152 163.093333 629.941333 85.333333 544.298667 85.333333c-77.226667 0-116.010667 38.378667-138.88 115.093334l-0.586667 2.24c-13.728 62.058667-34.72 110.165333-62.506667 144.586666a158.261333 158.261333 0 0 1-119.733333 58.965334l-21.909333 0.469333C148.437333 407.808 106.666667 450.816 106.666667 503.498667V821.333333c0 64.8 52.106667 117.333333 116.394666 117.333334h412.522667c84.736 0 160.373333-53.568 189.12-133.92l85.696-239.584c21.802667-60.96-9.536-128.202667-70.005333-150.186667a115.552 115.552 0 0 0-39.488-6.954667H621.674667z" :fill="praised? '#ED722E': '#8a8a8a'" p-id="2215"></path></svg></el-icon>
           <el-icon v-show="btnLoading" class="is-loading" size="20"><Loading /></el-icon>
@@ -12,7 +12,7 @@
     </div>
     <!-- 评论  -->
     <div class="mb-4 p-0">
-      <el-badge :type="commented? 'danger': 'primary'" :value="commentCnt" :hidden="commentCnt === 0" class="item">
+      <el-badge :offset="[-5, 5]" :type="commented?  'danger': 'primary'" :value="commentCnt" :hidden="commentCnt === 0" class="item">
         <el-button circle round size="large">
           <el-icon v-show="!btnLoading" size="20" :color="commented? '#ED722E': '#8a8a8a'"><Comment/></el-icon>
           <el-icon v-show="btnLoading" class="is-loading" size="20"><Loading /></el-icon>
@@ -21,7 +21,7 @@
     </div>
     <!-- 收藏 -->
     <div class="mb-4">
-      <el-badge :type="collected? 'danger': 'primary'" :value="collectCnt" class="item" :hidden="collectCnt === 0">
+      <el-badge :offset="[-5, 5]" :type="collected? 'danger': 'primary'" :value="collectCnt" class="item" :hidden="collectCnt === 0">
         <el-button circle round size="large" @click="collectArticle">
           <template #default>
             <el-icon  v-show="!btnLoading" size="20" :color="collected? '#ED722E': '#8a8a8a'"><StarFilled/></el-icon>
@@ -40,7 +40,7 @@
       {{articleVo.article.title}}
     </div>
     <div>
-      <div class="detail-content-title-other-wrap relative" v-if="articleVo.article && Object.keys(articleVo.article).length !== 0" >
+      <div class="detail-content-title-other-wrap relative flex justify-between" v-if="articleVo.article && Object.keys(articleVo.article).length !== 0" >
         <div id="article-basic-info" class="flex justify-between" style="color: #999999">
           <div class="flex">
             <p class="center-content mr-2">
@@ -286,13 +286,13 @@ const deleteArticle = () => {
 
 // ========= 点赞、收藏、评论 ============
 const btnLoading = ref(false)
-const praiseCnt = ref( 0)
-const commentCnt = ref(0)
-const collectCnt = ref(0)
-const praised = ref(false)
-const commented = ref(false)
-const collected = ref(false)
-const praisedUsers = ref<SimpleUserInfo[]>([])
+const praiseCnt = ref( props.articleVo.article.count.praiseCount)
+const commentCnt = ref(props.articleVo.article.count.commentCount)
+const collectCnt = ref(props.articleVo.article.count.collectionCount)
+const praised = ref(props.articleVo.article.praised)
+const commented = ref(props.articleVo.article.commented)
+const collected = ref(props.articleVo.article.collected)
+const praisedUsers = ref<SimpleUserInfo[]>(props.articleVo.article.praisedUsers? props.articleVo.article.praisedUsers: [])
 
 watch(() => props.articleVo.article, (newVal) => {
   console.log(newVal)

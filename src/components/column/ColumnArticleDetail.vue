@@ -29,26 +29,27 @@
             </span>
             <span class="p-1">{{'阅读 ' + articleVo.article.count.readCount}}</span>
           </div>
-        </div>
-        <div class="flex" v-if="global.isLogin && articleVo.article.author == global.user.id">
-          <p class="p-1 edit-delete-btn flex">
+          <div class="flex" v-if="global.isLogin && articleVo.article.author == global.user.id">
+            <p class="p-1 edit-delete-btn flex">
               <span class="center-content">
                 <el-icon :size="20">
                   <Edit />
                 </el-icon>
               </span>
-            <span>编辑</span>
-          </p>
-          <p class="p-1 edit-delete-btn flex">
+              <span>编辑</span>
+            </p>
+            <p class="p-1 edit-delete-btn flex">
               <span class="center-content">
                 <el-icon :size="20">
                   <Delete />
                 </el-icon>
               </span>
-            <span>删除</span>
-          </p>
+              <span>删除</span>
+            </p>
+          </div>
         </div>
-        <!--    文章的tag    -->
+
+        <!--   文章的tag    -->
         <div>
           <el-tag class="m-1" v-for="tagItem in articleVo.article.tags" :type="getRandomElTagType()" :key="tagItem.tagId">{{tagItem.tag}}</el-tag>
         </div>
