@@ -126,19 +126,19 @@
                           <span><el-icon size="13"><CaretRight /></el-icon><b>核心技术：</b></span>
                         </p>
                         <p class="m-1 ml-4">
-                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>通过验证码和前端保持半长链接映射关系，当用户扫码关注公众号并输入验证后，发起回调，识别用户信息并找到对应半长链接，实现系统自动登录。</span>
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>通过验证码和前端保持半长链接映射关系，当用户扫码关注公众号并输入验证后，发起回调，识别用户信息并找到对应半长链接，实现系统自动登录</span>
                         </p>
                         <p class="m-1 ml-4">
-                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>将用户评论、点赞、收藏、系统消息发送到RabbitMQ、实现消息的一部解耦，提升系统效率和服务稳定性。</span>
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>将用户评论、点赞、收藏、系统消息发送到RabbitMQ、实现消息的一部解耦，提升系统效率和服务稳定性</span>
                         </p>
                         <p class="m-1 ml-4">
                           <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>通过Redis实现计数统计和用户活跃度排行，并通过先写MySQL再删Redis的方案来保证高并发场景下的缓存一致性</span>
                         </p>
                         <p class="m-1 ml-4">
-                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>将用户评论、点赞、收藏、系统消息发送到RabbitMQ、实现消息的一部解耦，提升系统效率和服务稳定性。</span>
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>将用户评论、点赞、收藏、系统消息发送到RabbitMQ、实现消息的一部解耦，提升系统效率和服务稳定性</span>
                         </p>
                         <p class="m-1 ml-4">
-                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>采用HandlerExceptionResolver的全局异常处理策略，提高了代码的健壮性和可维护性，优化了用户体验。</span>
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>采用HandlerExceptionResolver的全局异常处理策略，提高了代码的健壮性和可维护性，优化了用户体验</span>
                         </p>
                         <p class="m-1 ml-4">
                           <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>基于ThreadLocal在登录校验拦截器中封装线程隔离的全局上下文，以便在线程内部存储用户信息，减少用户信息的数据库查询次数</span>
@@ -152,11 +152,48 @@
                         <p class="m-1 ml-4">
                           <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>采用自旋锁策略优化缓存结构，针对热key的并发访问进行同步，防止其失效时的缓存击穿</span>
                         </p>
+                        <p class="m-1">
+                          <span><el-icon size="13"><CaretRight /></el-icon><b>项目链接：</b><a href="http://www.xuyifei.site"><u>就是本项目</u></a></span>
+                        </p>
                       </div>
                     </template>
                   </el-collapse-item>
                 </el-collapse>
-
+                <el-collapse>
+                  <el-collapse-item title="SimpleDB：手搓的简易版MySQL数据库">
+                    <template #default>
+                      <div>
+                        <p class="m-1">
+                          <span class="mr-3"><el-icon size="13"><CaretRight /></el-icon><b>项目描述：</b>SimpleDB致力于实现一个简易版本MySQL数据库（基于InnoDB引擎）。该相项目涵盖了数据存储、事务管理、MVCC和索引构建等核心数据库功能，还模拟实现日志管理和事务状态查询等特性</span>
+                        </p>
+                        <p class="m-1">
+                          <span class="mr-3"><el-icon size="13"><CaretRight /></el-icon><b>责任描述：</b>独立开发</span>
+                        </p>
+                        <p class="m-1">
+                          <span><el-icon size="13"><CaretRight /></el-icon><b>核心技术：</b></span>
+                        </p>
+                        <p class="m-1 ml-4">
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon><b>日志管理：</b>引入数据库日志管理机制，通过日志保障数据一致性，实现故障恢复功能，强化数据的安全性和稳定性</span>
+                        </p>
+                        <p class="m-1 ml-4">
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon><b>MVCC与锁协议：</b>基于两阶段锁（2PL）协议与MVCC实现事务的 读提交、可重复读 隔离级别，并解决了<b>版本跳跃</b>问题</span>
+                        </p>
+                        <p class="m-1 ml-4">
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon><b>死锁检测与预防：</b>通过维护一个依赖等待图来监控并避免系统中出现死锁</span>
+                        </p>
+                        <p class="m-1 ml-4">
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon><b>索引与表管理：</b>实现<b>基于B+树的聚簇索引</b>，支持高效的索引查询；并构建表管理器，负责管理表结构和字段信息、解析SQL语句</span>
+                        </p>
+                        <p class="m-1 ml-4">
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>采用HandlerExceptionResolver的全局异常处理策略，提高了代码的健壮性和可维护性，优化了用户体验。</span>
+                        </p>
+                        <p class="m-1">
+                          <span><el-icon size="13"><CaretRight /></el-icon><b>项目链接：</b><a href="https://github.com/XuYi-fei/SimpleDB"><u>https://github.com/XuYi-fei/SimpleDB</u></a></span>
+                        </p>
+                      </div>
+                    </template>
+                  </el-collapse-item>
+                </el-collapse>
               </template>
             </el-card>
           </section>
