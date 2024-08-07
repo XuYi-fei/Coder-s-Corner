@@ -118,6 +118,7 @@
               <template #dropdown>
                 <el-dropdown-menu>
                   <el-dropdown-item><span @click="personalPage"> 个人主页 </span></el-dropdown-item>
+                  <el-dropdown-item><span @click="toolsPage"> 工具 </span></el-dropdown-item>
                   <el-dropdown-item><span @click="logout"> 登出 </span></el-dropdown-item>
                 </el-dropdown-menu>
               </template>
@@ -194,6 +195,16 @@ const personalPage = () => {
   }else{
     router.push(global.user.userId? '/user/' + global.user.userId: '/login')
   }
+}
+
+// ==========工具主页==========
+const toolsPage = () => {
+  console.log(route.fullPath)
+  if(route.fullPath.includes('/tools/')){
+    messageTip("已经在工具页了", MESSAGE_TYPE.INFO)
+    return
+  }
+  router.push('/tools/')
 }
 
 // ==========退出登录==========

@@ -88,6 +88,23 @@ export function doDelete<T>(url: string, params: Params): Promise<AxiosResponse<
   });
 }
 
+// 用于发送给除了springboot后端以外的其他后端
+// 用于发送文件并接收文件下载
+export function extraFilePostAndDownload(baseUrl: string, url: string, data: FormData, params?: Data): Promise<AxiosResponse<any>> {
+  return axios({
+    method: 'post',
+    baseURL: baseUrl,
+    url: url,
+    data: data,
+    params: params,
+    headers: {
+      'Content-Type': 'multipart/form-data',
+    },
+    withCredentials: false,
+    responseType: 'blob', // 设置 responseType 为 'blob'
+  });
+}
+
 axios.interceptors.request.use((config) => {
   let token = window.sessionStorage.getItem(getTokenName())
   if(!token){
