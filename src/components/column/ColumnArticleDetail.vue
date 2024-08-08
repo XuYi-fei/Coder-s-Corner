@@ -149,10 +149,9 @@
           <div class="modal-body">
             <div  class="content join-star">
               <p >二哥的编程星球内容包括：</p>
-              <p ><span class="category">1. 付费文档</span>: 技术派、MYDB 等项目配套的 120+篇教程查看权限</p>
+              <p ><span class="category">1. 付费文档</span>: 编程汇、MYDB 等项目配套的 120+篇教程查看权限</p>
               <p ><span class="category">2. 面试指南</span>: 校招、社招的 40 万+字面试求职攻略</p>
               <p ><span class="category">3. 智能助手</span>: 无限期使用派聪明 AI 助手，已对接讯飞星火和 ChatGPT双通道，不用花 1 分钱</p>
-              <p ><span class="category">4. 专属问答</span>: 向二哥 1v1 发起提问，内容不限于 offer 选择、学习路线、职业规划等</p>
               <p ><span class="category">5. 简历修改</span>: 提供简历修改服务，附赠星球 100+优质简历模板可供参考</p>
               <p ><span class="category">6. 学习环境</span>: 打造一个沉浸式的学习环境，有一种高考冲刺、大学考研的氛围</p> <br >
               <img  src="https://cdn.tobebetterjavaer.com/paicoding/153ba04898384c0c6b03dfe6ce1cbe76.jpg" alt="二哥的星球" style="cursor: zoom-in;width: 100%"> <br >

@@ -9,7 +9,7 @@
            href="http://xuyifei.site"
            target="_blank">
           小灰灰
-          {{'© 2024-' + format(new Date(), 'yyyy') + ' 技术派 '}}
+          {{'© 2024-' + format(new Date(), 'yyyy') + ' 编程汇 '}}
         </a>
       </div>
       <div class="stats-container">

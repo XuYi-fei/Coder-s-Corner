@@ -50,7 +50,7 @@
                   <a class="my-0 border-b py-1 px-2 border-gray-400 hover:bg-gray-400 block"
                      href="/article/detail/">
                       <span class="text-white text-sm hover:text-primary-200">
-                        <span class="title pre">技术派</span>
+                        <span class="title pre">编程汇</span>
                         <mark class="text-primary-300 bg-transparent">关键字</mark>
                         <span class="title last">就是牛</span>
                       </span>

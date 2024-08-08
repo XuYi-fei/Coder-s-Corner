@@ -110,14 +110,14 @@
               <template #header>项目经验</template>
               <template #default>
                 <el-collapse>
-                  <el-collapse-item title="技术派：前后端分离的社区项目、包括前端PC和管理后台">
+                  <el-collapse-item title="编程汇：前后端分离的社区项目、包括前端PC和管理后台">
                     <template #default>
                       <div>
                         <p class="m-1">
                           <span class="mr-3"><el-icon size="13"><CaretRight /></el-icon><b>技术栈：</b>SpringBoot、MyBatis-Plus、MySQL、Redis、RabbitMQ、Docker</span>
                         </p>
                         <p class="m-1">
-                          <span class="mr-3"><el-icon size="13"><CaretRight /></el-icon><b>项目描述：</b>技术派是一个前后端分离的社区项目、包括前端PC和管理后台，用于帮助开发者成长的社区，面向互联网技术人的内容分享平台</span>
+                          <span class="mr-3"><el-icon size="13"><CaretRight /></el-icon><b>项目描述：</b>编程汇是一个前后端分离的社区项目、包括前端PC和管理后台，用于帮助开发者成长的社区，面向互联网技术人的内容分享平台</span>
                         </p>
                         <p class="m-1">
                           <span class="mr-3"><el-icon size="13"><CaretRight /></el-icon><b>责任描述：</b>作为核心研发人员，主要负责登录认证、消息通知以及文章模块的开发工作</span>

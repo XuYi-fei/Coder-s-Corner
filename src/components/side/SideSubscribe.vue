@@ -23,7 +23,7 @@ const props = defineProps<{
                   <div class="mod-subscribe__content-prize">
                     {{side.content}}
                   </div>
-                  <div class="mod-subscribe__content-desc">技术派良心推荐</div>
+                  <div class="mod-subscribe__content-desc">编程汇良心推荐</div>
                 </div>
                 <div class="mod-subscribe__content-qr">
                   <img :src="side.img" :alt="side.subTitle"></div>

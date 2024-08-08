@@ -6,8 +6,8 @@
     <div class="nav-body">
       <div class="nav-logo-wrap-lg">
         <a class="navbar-logo-wrap" href="/">
-          <img class="logo hidden-when-screen-small" src="/src/assets/static/img/logo.svg"/>
-          <img src="/src/assets/static/img/icon.png" class="logo-lg display-when-screen-small" alt="" />
+          <img class="logo hidden-when-screen-small" src="/src/assets/static/img/logo.png"/>
+<!--          <img src="/src/assets/static/img/icon.png" class="logo-lg display-when-screen-small" alt="" />-->
         </a>
 
         <el-dropdown :hide-on-click="false" class="display-when-screen-small center-content">

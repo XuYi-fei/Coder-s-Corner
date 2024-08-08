@@ -1,6 +1,6 @@
 <template>
   <!-- 登录 Modal -->
-  <el-dialog v-model="loginModal" title="登录技术派畅享更多权益" width="600" border="border">
+  <el-dialog v-model="loginModal" title="登录编程汇畅享更多权益" width="600" border="border">
     <el-divider style="margin: 10px 0"></el-divider>
     <el-container>
       <el-main>

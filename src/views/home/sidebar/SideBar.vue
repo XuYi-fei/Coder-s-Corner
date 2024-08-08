@@ -1,7 +1,7 @@
 <template>
   <!-- 侧边栏 -->
   <div v-for="(sidebar, id) in sidebarItems" :key="id">
-    <SideNotice v-if="sidebar.style === 1" :side="sidebar"></SideNotice>
+<!--    <SideNotice v-if="sidebar.style === 1" :side="sidebar"></SideNotice>-->
     <SideArticles v-if="sidebar.style === 2" :side="sidebar"></SideArticles>
     <SideJoin v-if="sidebar.style === 3" :side="sidebar" ></SideJoin>
     <SideAbout v-if="sidebar.style === 4" :side="sidebar"></SideAbout>

@@ -44,7 +44,7 @@
           </div>
 
           <div class="chat-type">
-            <!-- 加一个下拉框，选项是 OpenAI 讯飞星火 技术派 -->
+            <!-- 加一个下拉框，选项是 OpenAI 讯飞星火 -->
             <el-select
               class="w-40"
               @change="chatTypeChange"
