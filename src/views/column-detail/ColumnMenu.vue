@@ -1,18 +1,18 @@
 <template>
   <el-menu
     :default-active="`/column/` + vo.column + '/' + vo.section"
-    class="el-menu-vertical-demo"
+    class="el-menu-vertical-demo overflow-auto"
     @open="handleOpen"
     @close="handleClose"
-    style="width: 275px; padding: 18px 5px 18px"
+    style="width: 315px; padding: 18px 5px 12px"
     active-text-color="var(--active-element-color)"
   >
     <a :href="`/column/` + vo.column + '/' + `${id+1}`" v-for="(menu, id) in vo.articleList" :key="id" class="mb-4">
       <el-menu-item  :index="`/column/` + vo.column + '/' + `${id+1}`">
         <template #default>
-          <div :title="menu.title" style="font-size: 16px; width: 180px" >
+          <div :title="menu.title" style="font-size: 16px; width: 210px" >
             <span class="mr-2 font-bold">{{id + 1}}</span>
-            <span > {{menu.title.length > 10? menu.title.substring(0, 10) + '....': menu.title}}</span>
+            <span > {{menu.title.length > 15? menu.title.substring(0, 15) + '....': menu.title}}</span>
           </div>
           <div class="right center-content">
             <div class="label label-free" v-if="menu.readType === 0">免费</div>
