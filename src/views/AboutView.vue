@@ -129,13 +129,10 @@
                           <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>通过验证码和前端保持半长链接映射关系，当用户扫码关注公众号并输入验证后，发起回调，识别用户信息并找到对应半长链接，实现系统自动登录</span>
                         </p>
                         <p class="m-1 ml-4">
-                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>将用户评论、点赞、收藏、系统消息发送到RabbitMQ、实现消息的一部解耦，提升系统效率和服务稳定性</span>
+                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>将用户评论、点赞、收藏、系统消息发送到RabbitMQ、实现消息的异步解耦，提升系统效率和服务稳定性</span>
                         </p>
                         <p class="m-1 ml-4">
                           <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>通过Redis实现计数统计和用户活跃度排行，并通过先写MySQL再删Redis的方案来保证高并发场景下的缓存一致性</span>
-                        </p>
-                        <p class="m-1 ml-4">
-                          <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>将用户评论、点赞、收藏、系统消息发送到RabbitMQ、实现消息的一部解耦，提升系统效率和服务稳定性</span>
                         </p>
                         <p class="m-1 ml-4">
                           <span class="mr-3"><el-icon size="11"><InfoFilled /></el-icon>采用HandlerExceptionResolver的全局异常处理策略，提高了代码的健壮性和可维护性，优化了用户体验</span>
